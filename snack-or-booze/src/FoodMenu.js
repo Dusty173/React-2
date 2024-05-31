@@ -10,31 +10,19 @@ import {
   ListGroupItem,
 } from "reactstrap";
 
-function FoodMenu({ snacks, drinks }) {
-  let items;
-  let menuName;
-  let urlParam;
-  if (snacks) {
-    items = snacks;
-    urlParam = "snacks";
-    menuName = "Snacks";
-  } else {
-    items = drinks;
-    urlParam = "drinks";
-    menuName = "Drinks";
-  }
+function FoodMenu({ items, title }) {
 
   return (
     <section className="col-md-4">
       <Card>
         <CardBody>
           <CardTitle className="font-weight-bold text-center">
-            {menuName} Menu
+            {title} Menu
           </CardTitle>
-          <CardText>Please select from our {menuName}.</CardText>
+          <CardText>Please select from our {title}.</CardText>
           <ListGroup>
             {items.map((item) => (
-              <Link to={`/${urlParam}/${item.id}`} key={item.id}>
+              <Link to={`/${title}/${item.id}`} key={item.id}>
                 <ListGroupItem>{item.name}</ListGroupItem>
               </Link>
             ))}
