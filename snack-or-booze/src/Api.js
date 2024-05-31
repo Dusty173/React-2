@@ -20,9 +20,9 @@ class SnackOrBoozeApi {
     return res.data;
   }
 
-  static async postItem(){
-    const post = await axios.post(`${BASE_API_URL}/`)
-    return post.status;
+  static async postItem(data, type){
+    const post = await axios.post(`${BASE_API_URL}/${type}`, data)
+    console.log(post.status); 
   }
 
 }

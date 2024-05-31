@@ -27,6 +27,13 @@
       "description": "Crisp!",
       "recipe": "Open can.",
       "serve": "Immediately."
+    },
+    {
+      "name": "Red Bull Charger",
+      "description": "Red bull on ice with optional added flavors and optional creme",
+      "recipe": "Red Bull, Ice, Flavor of choosing, Half and Half is optional",
+      "serve": "In a cup",
+      "id": "4RN1cKi"
     }
   ],
   "snacks": [
@@ -50,6 +57,13 @@
       "description": "Tart and delicious.",
       "recipe": "Mix arugula, toasted walnuts, and thinly-sliced Parmesan cheese. Dress with lemon and olive oil.",
       "serve": "Place on tiny, precious little plates."
+    },
+    {
+      "name": "Ice Cream",
+      "description": "Cold sweet gift from the heavens",
+      "recipe": "Heavy Cream, Whole Milk, Cane sugar, Vanilla Extract, Salt",
+      "serve": "Make as much as possible and put into biggest bowl possible",
+      "id": "TO-4uhO"
     }
   ]
 }
