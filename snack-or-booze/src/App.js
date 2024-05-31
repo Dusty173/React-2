@@ -16,14 +16,14 @@ function App() {
 
   useEffect(() => {
     async function getItems() {
-      let snacks = await SnackOrBoozeApi.getItems();
+      let snacks = await SnackOrBoozeApi.getSnacks();
       setSnacks(snacks);
       let drinks = await SnackOrBoozeApi.getDrinks();
       setDrinks(drinks);
       setIsLoading(false);
     }
     getItems();
-  }, [snacks, drinks]);
+  }, []);
 
   if (isLoading) {
     return <p>Loading &hellip;</p>;
@@ -36,7 +36,7 @@ function App() {
         <main>
           <Switch>
             <Route exact path="/">
-              <Home snacks={snacks} />
+              <Home snacks={snacks} drinks={drinks} />
             </Route>
             <Route exact path="/snacks">
               <Menu snacks={snacks} title="Snacks" />
@@ -47,7 +47,7 @@ function App() {
             <Route exact path="/drinks">
               <Menu snacks={drinks} title="Drinks" />
             </Route>
-            <Route path="/snacks/:id">
+            <Route path="/drinks/:id">
               <Snack items={drinks} cantFind="/drinks" />
             </Route>
             <Route path="/add-item">

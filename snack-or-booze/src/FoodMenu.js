@@ -13,12 +13,14 @@ import {
 function FoodMenu({ snacks, drinks }) {
   let items;
   let menuName;
-
+  let urlParam;
   if (snacks) {
     items = snacks;
+    urlParam = "snacks";
     menuName = "Snacks";
   } else {
     items = drinks;
+    urlParam = "drinks";
     menuName = "Drinks";
   }
 
@@ -32,7 +34,7 @@ function FoodMenu({ snacks, drinks }) {
           <CardText>Please select from our {menuName}.</CardText>
           <ListGroup>
             {items.map((item) => (
-              <Link to={`/snacks/${item.id}`} key={item.id}>
+              <Link to={`/${urlParam}/${item.id}`} key={item.id}>
                 <ListGroupItem>{item.name}</ListGroupItem>
               </Link>
             ))}

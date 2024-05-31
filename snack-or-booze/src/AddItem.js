@@ -14,13 +14,15 @@ function AddItem({ setData }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setData(formData);
+    SnackOrBoozeApi.postItem(formData);
+
   };
 
   const getSelected = () => {
     const selected = document.getElementById("item");
     setItem(selected.value);
   };
+
 
   return (
     <form id="add-form" onSubmit={handleSubmit}>
